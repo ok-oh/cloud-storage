@@ -38,6 +38,7 @@ function handleExit(){
     </el-menu-item>
     <el-menu-item index="/application" v-if="user.username!==''">上传</el-menu-item>
     <el-menu-item index="/audit" v-if="user.username!==''">管理</el-menu-item>
+    <el-menu-item index="/log" v-if="user.username!==''">日志</el-menu-item>
     <div style="flex-grow: 1" />
     <el-menu-item index="/login" v-if="user.username===''">登录</el-menu-item>
     <el-menu-item index="/register" v-if="user.username===''">注册</el-menu-item>
