@@ -50,7 +50,7 @@ function addPermission(filename, username){
 
 function delPermission(filename, username){
   const postUrl = SERVER_ADDR+'/deletePermission/'+user.username+'/'+filename+'/'+username
-  axios.post(postUrl)
+  axios.delete(postUrl)
       .then(() => {
         ElNotification({
           offset: 70,

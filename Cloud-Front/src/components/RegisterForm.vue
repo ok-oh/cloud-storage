@@ -50,6 +50,25 @@ const submitForm = async (formEL: FormInstance | undefined) => {
             username: ruleForm.username,
             password: ruleForm.password,
           })
+
+        if(response.data == 'user add success')
+        {
+            ElNotification({
+                offset: 70,
+                title: '注册成功',
+                duration: 1500
+            })
+            await router.push('/login')
+        }
+        else
+        {
+            ElNotification({
+                offset: 70,
+                title: '用户已存在',
+                duration: 1500
+            })
+        }
+
     } catch (error) {
       console.log(error)
       ElNotification({
@@ -60,12 +79,7 @@ const submitForm = async (formEL: FormInstance | undefined) => {
       return
     }
 
-    ElNotification({
-      offset: 70,
-      title: '注册成功',
-      duration: 1500
-    })
-    await router.push('/login')
+    return
   })
 }
 

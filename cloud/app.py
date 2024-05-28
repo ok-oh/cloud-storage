@@ -65,7 +65,7 @@ def upload_file(username):
 # 文件下载接口
 @app.route('/download/<filename>/<username>', methods=['GET'])
 def download_file(filename,username):
-    download_path = os.path.join(os.getcwd(), 'download' ,filename)
+    download_path ='C:/Users/86189/Downloads/' + filename
 
 
     for user in filePermission_Collection[filename]:

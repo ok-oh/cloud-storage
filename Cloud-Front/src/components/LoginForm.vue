@@ -47,6 +47,13 @@ const submitForm = async (formEL) => {
           duration: 1500
         })
         await router.push('/')
+      }else
+      {
+          ElNotification({
+              offset: 70,
+              title: '用户不存在或密码错误',
+              duration: 1500
+          })
       }
     } catch (error) {
       console.log(error)
